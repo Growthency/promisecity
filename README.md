@@ -29,7 +29,7 @@ Only 3 colors and their mixes are used across the entire site:
 ```
 .
 ├── convex/                 # Convex schema + mutations
-├── public/                 # logo.png, promo.mp4, sw.js
+├── public/                 # logo.png, sw.js
 ├── src/
 │   ├── app/                # App Router (pages, actions, manifest)
 │   ├── components/         # All UI sections

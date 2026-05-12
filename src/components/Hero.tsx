@@ -86,8 +86,6 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [1, 0.5, 0]);
-  const videoScale = useTransform(scrollYProgress, [0, 1], [1, reduce ? 1 : 1.06]);
 
   // Auto-rotate divisions every 7.5s. No pause-on-hover — hover was firing
   // immediately on page load (cursor naturally over hero) and freezing the
@@ -112,25 +110,6 @@ export default function Hero() {
       ref={ref}
       className="relative isolate min-h-[100svh] overflow-hidden pt-24 sm:pt-28 pb-12 flex flex-col"
     >
-      {/* Promo video — soft light overlay */}
-      <motion.div
-        style={{ scale: videoScale, opacity }}
-        className="absolute inset-0 -z-20"
-      >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/logo.png"
-          className="h-full w-full object-cover opacity-10"
-        >
-          <source src="/promo.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/92 via-white/88 to-white" />
-      </motion.div>
-
       <div className="absolute inset-0 -z-10 mesh-bg" />
       <AnimatedBlobs />
       <div className="absolute inset-0 -z-10 grid-bg opacity-50" />
