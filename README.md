@@ -28,7 +28,6 @@ Only 3 colors and their mixes are used across the entire site:
 
 ```
 .
-├── .claude/launch.json     # Dev server config
 ├── convex/                 # Convex schema + mutations
 ├── public/                 # logo.png, promo.mp4, sw.js
 ├── src/
